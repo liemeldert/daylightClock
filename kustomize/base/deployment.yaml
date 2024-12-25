@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: daylight-clock
-        image: ghcr:latest
+        image: ghcr.io/liemeldert/daylight_clock:latest
         ports:
-        - containerPort: 80
+        - containerPort: 80   
