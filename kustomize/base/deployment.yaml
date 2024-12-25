@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: daylight-clock
+  namespace: daylight
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daylight-clock
+  template:
+    metadata:
+      labels:
+        app: daylight-clock
+    spec:
+      containers:
+      - name: daylight-clock
+        image: ghcr:latest
+        ports:
+        - containerPort: 80
